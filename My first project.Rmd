@@ -1,9 +1,0 @@
-x<- 1
-print(x)
-print(x+1)
-
-print(msg)
-
-
-msg <- 1:30
-print(msg)
