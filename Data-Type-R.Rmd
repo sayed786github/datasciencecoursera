@@ -1,0 +1,55 @@
+# R Objects
+
+R has five basic or "atomic" classes of objects:
+
+**• character**
+
+**• numeric (real numbers)**
+
+**. attributes**
+
+**• integer**
+
+**• complex**
+
+**• logical (True/False)**
+
+The most basic object is a vector
+
+. A vector can only contain object of the same class
+
+But: The one exception **is a list**, which is represented as a vector but can contain objects of different classes (indeed, that's usually why we use them)
+
+Empty vectors can be created with the **vector() function.**
+
+## 
+
+Numbers
+
+Numbers in R are generally treated as numeric objects (i.e. double precision real numbers). This
+means that even if you see a number like \"1\" or \"2\" in R, which you might think of as integers, they
+are likely represented behind the scenes as numeric objects (so something like \"1.00\" or \"2.00\"). This
+isn\'t important most of the time...except when it is.
+
+R Nuts and Bolts 14
+
+If you explicitly want an integer, you need to specify the L suffix. So entering 1 in R gives you a
+numeric object; entering 1L explicitly gives you an integer object.
+There is also a special number Inf which represents infinity. This allows us to represent entities like
+1 / 0. This way, Inf can be used in ordinary calculations; e.g. 1 / Inf is 0.
+The value NaN represents an undefined value (\"not a number\"); e.g. 0 / 0; NaN can also be thought of
+as a missing value (more on that later)
+
+## 
+Attributes
+
+R objects can have attributes, which are like metadata for the object. These metadata can be very
+useful in that they help to describe the object. For example, column names on a data frame help to
+tell us what data are contained in each of the columns. Some examples of R object attributes are
+• names, dimnames
+• dimensions (e.g. matrices, arrays)
+• class (e.g. integer, numeric)
+• length
+• other user-defined attributes/metadata
+Attributes of an object (if any) can be accessed using the attributes() function. Not all R objects
+contain attributes, in which case the attributes() function returns NULL
