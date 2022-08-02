@@ -18,3 +18,50 @@ x <- c(1+0i, 2+4i) ## complex
 
 x <- vector("numeric", length = 20)
 ```
+
+### Mixing Objects
+
+What about the following?
+
+```{r}
+y <- c(1.7, "a") ## chactery
+y <- c(TRUE, 2) ## numeric
+y <- c("a", TRUE) ## charcter
+
+```
+
+### 
+
+### Explicit Coercion
+
+```{r}
+x <- 0:6
+as.numeric(x)
+as.logical(x)
+as.character(x)
+```
+
+Nonsensical coercion results in NAS
+
+```{r}
+
+x <- c ("c", "b", "a")
+as.logical(x)
+
+as.numeric(x)
+
+as.complex(x)
+```
+
+## List
+
+Lists are a special type of vector that can contain elements of different classes. Lists are a very
+important data type in R and you should get to know them well. Lists, in combination with the
+various \"apply\" functions discussed later, make for a powerful combination.
+
+Lists can be explicitly created using the **list() function**, which takes an arbitrary number of
+arguments.
+
+```{r}
+x <- list(1, "a", TRUE, 1 + 4i)
+```
